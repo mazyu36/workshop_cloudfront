@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="AWS ">
+<meta name="description" content="$(document).ready(() = { $.ajax({ url: &#34;/api/echo&#34;, type: &#34;GET&#34;, dataType: &#34;json&#34;, success: function (data) { console.log(&#34;data&#34;,data); $(&#34;#requestInfoList&#34;).append(&#34;Method : &#34; &#43; data.Method &#43; &#34;&#34;); $(&#34;#requestInfoList&#34;).append(&#34;Path : &#34; &#43; data.Path &#43; &#34;&#34;); $(&#34;#requestInfoList&#34;).append(&#34;Time : &#34; &#43; data.Time &#43; &#34;&#34;); $(&#34;#requestInfoList&#34;).append(&#34;Request Header&#34;); $(&#34;#requestInfoList&#34;).append(&#34;&#34;); for(var key in data.headers) { $(&#34;#requestHeaderList&#34;).append(&#34;&#34; &#43; key &#43; &#34; : &#34; &#43; data.headers[key] &#43; &#34;&#34;); } } }); });    " />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="/api-echo/" />
+
+
+    <title>
+        
+            API :: Welcome to AWS CloudFront Lab  — AWS Edge Service
+        
+    </title>
+
+
+
+
+
+<link rel="stylesheet" href="/main.83bc560250103aeb84854e847f1d337816046a9e1959aea28d2e3104dfd8b9dc.css">
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/flag-icon.min.css">
+    
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="/favicon.png">
+    <meta name="msapplication-TileColor" content="#1b1c1d">
+    <meta name="theme-color" content="#1b1c1d">
+
+
+
+<meta itemprop="name" content="API">
+<meta itemprop="description" content="$(document).ready(() = { $.ajax({ url: &#34;/api/echo&#34;, type: &#34;GET&#34;, dataType: &#34;json&#34;, success: function (data) { console.log(&#34;data&#34;,data); $(&#34;#requestInfoList&#34;).append(&#34;Method : &#34; &#43; data.Method &#43; &#34;&#34;); $(&#34;#requestInfoList&#34;).append(&#34;Path : &#34; &#43; data.Path &#43; &#34;&#34;); $(&#34;#requestInfoList&#34;).append(&#34;Time : &#34; &#43; data.Time &#43; &#34;&#34;); $(&#34;#requestInfoList&#34;).append(&#34;Request Header&#34;); $(&#34;#requestInfoList&#34;).append(&#34;&#34;); for(var key in data.headers) { $(&#34;#requestHeaderList&#34;).append(&#34;&#34; &#43; key &#43; &#34; : &#34; &#43; data.headers[key] &#43; &#34;&#34;); } } }); });    ">
+
+<meta itemprop="wordCount" content="59"><meta itemprop="image" content="/"/>
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/"/>
+
+<meta name="twitter:title" content="API"/>
+<meta name="twitter:description" content="$(document).ready(() = { $.ajax({ url: &#34;/api/echo&#34;, type: &#34;GET&#34;, dataType: &#34;json&#34;, success: function (data) { console.log(&#34;data&#34;,data); $(&#34;#requestInfoList&#34;).append(&#34;Method : &#34; &#43; data.Method &#43; &#34;&#34;); $(&#34;#requestInfoList&#34;).append(&#34;Path : &#34; &#43; data.Path &#43; &#34;&#34;); $(&#34;#requestInfoList&#34;).append(&#34;Time : &#34; &#43; data.Time &#43; &#34;&#34;); $(&#34;#requestInfoList&#34;).append(&#34;Request Header&#34;); $(&#34;#requestInfoList&#34;).append(&#34;&#34;); for(var key in data.headers) { $(&#34;#requestHeaderList&#34;).append(&#34;&#34; &#43; key &#43; &#34; : &#34; &#43; data.headers[key] &#43; &#34;&#34;); } } }); });    "/>
+
+
+
+
+    <meta property="og:title" content="API" />
+<meta property="og:description" content="$(document).ready(() = { $.ajax({ url: &#34;/api/echo&#34;, type: &#34;GET&#34;, dataType: &#34;json&#34;, success: function (data) { console.log(&#34;data&#34;,data); $(&#34;#requestInfoList&#34;).append(&#34;Method : &#34; &#43; data.Method &#43; &#34;&#34;); $(&#34;#requestInfoList&#34;).append(&#34;Path : &#34; &#43; data.Path &#43; &#34;&#34;); $(&#34;#requestInfoList&#34;).append(&#34;Time : &#34; &#43; data.Time &#43; &#34;&#34;); $(&#34;#requestInfoList&#34;).append(&#34;Request Header&#34;); $(&#34;#requestInfoList&#34;).append(&#34;&#34;); for(var key in data.headers) { $(&#34;#requestHeaderList&#34;).append(&#34;&#34; &#43; key &#43; &#34; : &#34; &#43; data.headers[key] &#43; &#34;&#34;); } } }); });    " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/api-echo/" /><meta property="og:image" content="/"/><meta property="article:section" content="" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.30de8bd99b8b3334743c8eb2d5932a2579207854cecbcb299a5b2137bef26e702ba049b4d9c4dc88bf9c373cc2915ab8553e587e83f6ba013df4b5d8c21d3c0e.js" integrity="sha512-MN6L2ZuLMzR0PI6y1ZMqJXkgeFTOy8spmlshN77ybnAroEm02cTciL&#43;cNzzCkVq4VT5YfoP2ugE99LXYwh08Dg=="></script>
+
+
+
+
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text">$ cd /home/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/api-echo/index.html">API</a></li><li><a href="/fle/index.html">FLE</a></li><li><a href="/media/index.html">Media</a></li><li><a href="/signin/index.html">SignIn</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title">API</h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <script type="text/javascript">
+	$(document).ready(() => {
+		$.ajax({
+			url: "/api/echo",
+			type: "GET",
+			dataType: "json",
+			success: function (data) {
+				console.log("data",data);
+
+				$("#requestInfoList").append("<li>Method : "  + data.Method + "</li>");
+				$("#requestInfoList").append("<li>Path : "  + data.Path + "</li>");
+				$("#requestInfoList").append("<li>Time : "  + data.Time + "</li>");
+				$("#requestInfoList").append("<li>Request Header</li>");
+				$("#requestInfoList").append("<ul id=\"requestHeaderList\"></ul>");
+
+				for(var key in data.headers) {
+					
+					$("#requestHeaderList").append("<li>" + key + " : " + data.headers[key] + "</li>");
+				}
+			}
+		});
+	});
+</script>
+<div id="echoArea">
+	<ul id="requestInfoList"></ul>
+</div>
+
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <script type="text/javascript">
+	$(document).ready(() => {
+		$.ajax({
+			url: "/api/sessionvalue",
+			type: "GET",
+			dataType: "json",
+			success: function (data) {
+				console.log("data",data);
+				let sessionValueArea = document.getElementById("sessionValueArea");
+				let sessionValueMarkup = "<pre><code>Session Status - " + data.result + "</pre></code>";
+
+				sessionValueArea.insertAdjacentHTML("afterbegin", sessionValueMarkup);
+			},
+			error: function (data) {
+				console.log("data",data);
+			}
+		});
+	});
+</script>
+<footer class="footer">
+	
+	<div class="footer__inner">
+		<div class="footer__content">
+			<span>&copy; 2021</span>
+			
+			<span>AWS Edge Service</span>
+			
+			
+		</div>
+	</div>
+	
+	
+	<div id="sessionValueArea"></div> 
+</footer>
+
+            
+        </div>
+
+        
+    </body>
+</html>

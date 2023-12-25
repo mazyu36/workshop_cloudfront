@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Welcome to AWS CloudFront Lab</title>
+    <link>/</link>
+    <description>Recent content on Welcome to AWS CloudFront Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>AWS Edge Service</copyright><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>API</title>
+      <link>/api-echo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/api-echo/</guid>
+      <description>$(document).ready(() = { $.ajax({ url: &#34;/api/echo&#34;, type: &#34;GET&#34;, dataType: &#34;json&#34;, success: function (data) { console.log(&#34;data&#34;,data); $(&#34;#requestInfoList&#34;).append(&#34;Method : &#34; + data.Method + &#34;&#34;); $(&#34;#requestInfoList&#34;).append(&#34;Path : &#34; + data.Path + &#34;&#34;); $(&#34;#requestInfoList&#34;).append(&#34;Time : &#34; + data.Time + &#34;&#34;); $(&#34;#requestInfoList&#34;).append(&#34;Request Header&#34;); $(&#34;#requestInfoList&#34;).append(&#34;&#34;); for(var key in data.headers) { $(&#34;#requestHeaderList&#34;).append(&#34;&#34; + key + &#34; : &#34; + data.headers[key] + &#34;&#34;); } } }); });    </description>
+    </item>
+    
+    <item>
+      <title>Field Level Encryption</title>
+      <link>/fle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/fle/</guid>
+      <description>$(document).ready(() = { $(&#34;#fleForm&#34;).submit(function(){ let publicParameter = $(&#34;#publicParameter&#34;).val(); let secretParameter = $(&#34;#secretParameter&#34;).val(); $.ajax({ url: &#34;/api/fle&#34;, type: &#34;POST&#34;, data:{ publicParameter: publicParameter, secretParameter: secretParameter }, dataType: &#34;json&#34;, success: function (data) { console.log(&#34;data&#34;,data); alert(&#34;successfully transfered.&#34;); let parameterArea = document.getElementById(&#34;parameterArea&#34;); let parameterMarkup = &#34;Public Parameter - &#34; + data.publicParameter + &#34;Secret Parameter - &#34; + data.secretParameter + &#34;&#34;; $(&#34;#parameterArea&#34;).empty(); parameterArea.insertAdjacentHTML(&#34;afterbegin&#34;, parameterMarkup); } }); }); });        Forwarded parameter values to Origin</description>
+    </item>
+    
+    <item>
+      <title>Media</title>
+      <link>/media/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/media/</guid>
+      <description>$(document).ready(() = { let signedCookieNames = [&#34;CloudFront-Policy&#34;, &#34;CloudFront-Key-Pair-Id&#34;, &#34;CloudFront-Signature&#34;]; let signedCookieList = document.getElementById(&#34;signedCookieList&#34;); let signedCookieListMarkup; for (const cookieName of signedCookieNames){ let cookieValue = getCookie(cookieName); if(cookieValue) { console.log(cookieName + &#34; : &#34; + cookieValue); signedCookieListMarkup = &#34;&#34; + cookieName + &#34; - &#34; + cookieValue + &#34;&#34;; signedCookieList.insertAdjacentHTML(&#34;beforeend&#34;, signedCookieListMarkup); } } $.ajax({ url: &#34;/api/getplayurl&#34;, type: &#34;GET&#34;, dataType: &#34;json&#34;, success: function (data) { console.log(&#34;data&#34;,data); let playUrlList = document.getElementById(&#34;playUrlList&#34;); let playUrlListMarkup = &#34;</description>
+    </item>
+    
+    <item>
+      <title>Sign In</title>
+      <link>/signin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/signin/</guid>
+      <description>$(document).ready(() = { let sessionCookieName = &#34;cloudfront-workshopSessionId&#34;; let sessionValue = getCookie(sessionCookieName); let signInArea = document.getElementById(&#34;signInArea&#34;); let signInAreaMarkup; if (sessionValue) { signInAreaMarkup =`  You are signed-in and your current session info is as follows. ` + sessionValue + `   `; signInArea.insertAdjacentHTML(&#34;afterbegin&#34;, signInAreaMarkup); $(&#34;#signout_btn&#34;).click(function(){ document.cookie = sessionCookieName + &#34;= ; Path=/; expires = Thu, 01 Jan 1970 00:00:00 GMT&#34;; alert(&#34;successfully signed out.&#34;); location.reload(); }); } else { signInAreaMarkup =`      ` signInArea.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<smil>
+    <body>
+        <alias value="Sample" />
+        <switch>
+            <video name="sample.mp4" systemLanguage="eng" />
+        </switch>
+    </body>
+</smil>

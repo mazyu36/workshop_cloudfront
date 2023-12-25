@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="AWS ">
+<meta name="description" content="$(document).ready(() = { let sessionCookieName = &#34;cloudfront-workshopSessionId&#34;; let sessionValue = getCookie(sessionCookieName); let signInArea = document.getElementById(&#34;signInArea&#34;); let signInAreaMarkup; if (sessionValue) { signInAreaMarkup =`  You are signed-in and your current session info is as follows. ` &#43; sessionValue &#43; `   `; signInArea.insertAdjacentHTML(&#34;afterbegin&#34;, signInAreaMarkup); $(&#34;#signout_btn&#34;).click(function(){ document.cookie = sessionCookieName &#43; &#34;= ; Path=/; expires = Thu, 01 Jan 1970 00:00:00 GMT&#34;; alert(&#34;successfully signed out.&#34;); location.reload(); }); } else { signInAreaMarkup =`      ` signInArea." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="/signin/" />
+
+
+    <title>
+        
+            Sign In :: Welcome to AWS CloudFront Lab  — AWS Edge Service
+        
+    </title>
+
+
+
+
+
+<link rel="stylesheet" href="/main.83bc560250103aeb84854e847f1d337816046a9e1959aea28d2e3104dfd8b9dc.css">
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/flag-icon.min.css">
+    
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="/favicon.png">
+    <meta name="msapplication-TileColor" content="#1b1c1d">
+    <meta name="theme-color" content="#1b1c1d">
+
+
+
+<meta itemprop="name" content="Sign In">
+<meta itemprop="description" content="$(document).ready(() = { let sessionCookieName = &#34;cloudfront-workshopSessionId&#34;; let sessionValue = getCookie(sessionCookieName); let signInArea = document.getElementById(&#34;signInArea&#34;); let signInAreaMarkup; if (sessionValue) { signInAreaMarkup =`  You are signed-in and your current session info is as follows. ` &#43; sessionValue &#43; `   `; signInArea.insertAdjacentHTML(&#34;afterbegin&#34;, signInAreaMarkup); $(&#34;#signout_btn&#34;).click(function(){ document.cookie = sessionCookieName &#43; &#34;= ; Path=/; expires = Thu, 01 Jan 1970 00:00:00 GMT&#34;; alert(&#34;successfully signed out.&#34;); location.reload(); }); } else { signInAreaMarkup =`      ` signInArea.">
+
+<meta itemprop="wordCount" content="116"><meta itemprop="image" content="/"/>
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/"/>
+
+<meta name="twitter:title" content="Sign In"/>
+<meta name="twitter:description" content="$(document).ready(() = { let sessionCookieName = &#34;cloudfront-workshopSessionId&#34;; let sessionValue = getCookie(sessionCookieName); let signInArea = document.getElementById(&#34;signInArea&#34;); let signInAreaMarkup; if (sessionValue) { signInAreaMarkup =`  You are signed-in and your current session info is as follows. ` &#43; sessionValue &#43; `   `; signInArea.insertAdjacentHTML(&#34;afterbegin&#34;, signInAreaMarkup); $(&#34;#signout_btn&#34;).click(function(){ document.cookie = sessionCookieName &#43; &#34;= ; Path=/; expires = Thu, 01 Jan 1970 00:00:00 GMT&#34;; alert(&#34;successfully signed out.&#34;); location.reload(); }); } else { signInAreaMarkup =`      ` signInArea."/>
+
+
+
+
+    <meta property="og:title" content="Sign In" />
+<meta property="og:description" content="$(document).ready(() = { let sessionCookieName = &#34;cloudfront-workshopSessionId&#34;; let sessionValue = getCookie(sessionCookieName); let signInArea = document.getElementById(&#34;signInArea&#34;); let signInAreaMarkup; if (sessionValue) { signInAreaMarkup =`  You are signed-in and your current session info is as follows. ` &#43; sessionValue &#43; `   `; signInArea.insertAdjacentHTML(&#34;afterbegin&#34;, signInAreaMarkup); $(&#34;#signout_btn&#34;).click(function(){ document.cookie = sessionCookieName &#43; &#34;= ; Path=/; expires = Thu, 01 Jan 1970 00:00:00 GMT&#34;; alert(&#34;successfully signed out.&#34;); location.reload(); }); } else { signInAreaMarkup =`      ` signInArea." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/signin/" /><meta property="og:image" content="/"/><meta property="article:section" content="" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.30de8bd99b8b3334743c8eb2d5932a2579207854cecbcb299a5b2137bef26e702ba049b4d9c4dc88bf9c373cc2915ab8553e587e83f6ba013df4b5d8c21d3c0e.js" integrity="sha512-MN6L2ZuLMzR0PI6y1ZMqJXkgeFTOy8spmlshN77ybnAroEm02cTciL&#43;cNzzCkVq4VT5YfoP2ugE99LXYwh08Dg=="></script>
+
+
+
+
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text">$ cd /home/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/api-echo/index.html">API</a></li><li><a href="/fle/index.html">FLE</a></li><li><a href="/media/index.html">Media</a></li><li><a href="/signin/index.html">SignIn</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title">Sign In</h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <script type="text/javascript">
+	$(document).ready(() => {
+		let sessionCookieName = "cloudfront-workshopSessionId";
+		let sessionValue = getCookie(sessionCookieName);
+		
+
+		let signInArea = document.getElementById("signInArea");
+		let signInAreaMarkup;
+		if (sessionValue) {
+			signInAreaMarkup =`
+			<div class="col-2 col-12-mobilep">
+				<input type="button" id="signout_btn" value="Sign Out"/>
+				<div>
+					You are signed-in and your current session info is as follows.
+					<pre><code>` + sessionValue + `</code></pre>
+				</div>
+			</div>
+			
+			`;
+			
+			signInArea.insertAdjacentHTML("afterbegin", signInAreaMarkup);
+
+			$("#signout_btn").click(function(){
+				document.cookie = sessionCookieName + "= ; Path=/; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+				alert("successfully signed out.");
+				location.reload();
+			});
+		}
+		else {
+			signInAreaMarkup =`
+			<form id="signInForm" onsubmit="return false;">
+				<div class="row gtr-50 gtr-uniform">
+					<div class="col-5 col-12-mobilep">
+						<input type="text" name="userId" id="userId" placeholder="User ID" />
+					</div>
+					<div class="col-5 col-12-mobilep">
+						<input type="password" name="userPassword" id="userPassword" placeholder="User Password" />
+					</div>
+					<div class="col-2 col-12-mobilep">
+						<input type="submit" value="Sign In"/>
+					</div>
+				</div>
+			</form>
+			`
+
+			signInArea.insertAdjacentHTML('afterbegin', signInAreaMarkup);
+
+			$("#signInForm").submit(function(){
+				let userId = $("#userId").val();
+				let userPassword = $("#userPassword").val();
+				$.ajax({
+					url: "/api/login",
+					type: "POST",
+					data:{
+					  username: userId,
+					  password: userPassword
+					},
+					dataType: "json",
+					success: function (data) {
+						console.log("data",data);
+
+						alert("successfully signed in.");
+						location.reload();
+					},
+					error: function (data) {
+						console.log("data",data);
+
+						alert("wrong ID or Password.");
+					}
+				});
+			});
+		}
+	});
+</script>
+<div id="signInArea"></div>
+
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <script type="text/javascript">
+	$(document).ready(() => {
+		$.ajax({
+			url: "/api/sessionvalue",
+			type: "GET",
+			dataType: "json",
+			success: function (data) {
+				console.log("data",data);
+				let sessionValueArea = document.getElementById("sessionValueArea");
+				let sessionValueMarkup = "<pre><code>Session Status - " + data.result + "</pre></code>";
+
+				sessionValueArea.insertAdjacentHTML("afterbegin", sessionValueMarkup);
+			},
+			error: function (data) {
+				console.log("data",data);
+			}
+		});
+	});
+</script>
+<footer class="footer">
+	
+	<div class="footer__inner">
+		<div class="footer__content">
+			<span>&copy; 2021</span>
+			
+			<span>AWS Edge Service</span>
+			
+			
+		</div>
+	</div>
+	
+	
+	<div id="sessionValueArea"></div> 
+</footer>
+
+            
+        </div>
+
+        
+    </body>
+</html>
