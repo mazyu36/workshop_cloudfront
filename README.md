@@ -26,10 +26,40 @@ API Gatewayにぶら下がっているLambda関数は以下である。
 | 8   | getplayurl      | Elemental MediaPackageのAssetから動画のパスを取得して返却する関数。                                                                                                                                                            |
 
 
+## プロジェクト構成
+
+```sh
+.
+├── README.md
+├── architecture.drawio.svg
+├── bin
+│   └── workshop_cloudfront.ts
+├── cdk.json
+├── cdk.out
+├── jest.config.js
+├── lib
+│   ├── construct
+│   │   ├── distribution.ts # CloudFront Distributionおよびオリジン（S3）を定義
+│   │   ├── media.ts # オリジン（Elemental Media Package）を定義
+│   │   └── restapi.ts # オリジン（API Gateway）を定義
+│   ├── origin_contents # 動作確認用のコンテンツ
+│   ├── failover_contents # オリジンフェイルオーバーテスト用コンテンツ
+│   ├── lambda # API GWのバックエンドのLambda実装
+│   ├── media_contents # オリジン（Elemental MediaPackage）のコンテンツ
+│   └── workshop_cloudfront-stack.ts
+├── package-lock.json
+├── package.json
+├── parameter.ts # 環境依存パラメータを定義
+├── test
+│   ├── __snapshots__
+│   └── workshop_cloudfront.test.ts
+└── tsconfig.json
+```
+
 ## デプロイ方法
 * 以下で公開鍵と秘密鍵を設定
 
-```bash
+```sh
 openssl genrsa -out CloudFront-Workshop-Private-Key.pem 2048; openssl rsa -pubout -in CloudFront-Workshop-Private-Key.pem -out CloudFront-Workshop-Public-Key.pem;\n
 ```
 
